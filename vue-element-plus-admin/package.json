@@ -22,7 +22,6 @@
     "lint:format": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,vue,html,md}\"",
     "lint:style": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
-    "prepare": "husky install",
     "p": "plop",
     "analysis": "windicss-analysis"
   },
@@ -72,11 +71,11 @@
     "postcss-less": "^6.0.0",
     "prettier": "^2.8.0",
     "rimraf": "^3.0.2",
-    "rollup": "^3.4.0",
+    "rollup": "^2",
     "typescript": "4.9.3",
     "unplugin-vue-macros": "^0.16.5",
     "vite": "3.2.4",
-    "vite-plugin-eslint": "^1.8.1",
+
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-purge-icons": "^0.9.1",
