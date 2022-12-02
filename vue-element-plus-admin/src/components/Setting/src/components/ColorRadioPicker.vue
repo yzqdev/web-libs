@@ -38,11 +38,11 @@ watch(
 </script>
 
 <template>
-  <div :class="prefixCls" class="flex flex-wrap space-x-14px">
+  <div :class="prefixCls" class="flex flex-wrap space-x-[14px]">
     <span
       v-for="(item, i) in schema"
       :key="`radio-${i}`"
-      class="w-20px h-20px cursor-pointer rounded-2px border-solid border-gray-300 border-2px text-center leading-20px mb-5px"
+      class="w-[20px] h-[20px] cursor-pointer rounded-2px border-solid border-gray-300 border-[2px] text-center leading-20px mb-[5px]"
       :class="{ 'is-active': colorVal === item }"
       :style="{
         background: item

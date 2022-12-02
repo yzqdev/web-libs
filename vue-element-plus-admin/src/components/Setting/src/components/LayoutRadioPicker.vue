@@ -13,11 +13,11 @@ const layout = computed(() => appStore.getLayout)
 </script>
 
 <template>
-  <div :class="prefixCls" class="flex flex-wrap space-x-14px">
+  <div :class="prefixCls" class="flex flex-wrap space-x-[14px]">
     <div
       :class="[
         `${prefixCls}__classic`,
-        'relative w-56px h-48px cursor-pointer bg-gray-300',
+        'relative w-[56px] h-[48px] cursor-pointer bg-gray-300',
         {
           'is-acitve': layout === 'classic'
         }
@@ -27,7 +27,7 @@ const layout = computed(() => appStore.getLayout)
     <div
       :class="[
         `${prefixCls}__top-left`,
-        'relative w-56px h-48px cursor-pointer bg-gray-300',
+        'relative w-[56px] h-[48px] cursor-pointer bg-gray-300',
         {
           'is-acitve': layout === 'topLeft'
         }
@@ -37,7 +37,7 @@ const layout = computed(() => appStore.getLayout)
     <div
       :class="[
         `${prefixCls}__top`,
-        'relative w-56px h-48px cursor-pointer bg-gray-300',
+        'relative w-[56px] h-[48px] cursor-pointer bg-gray-300',
         {
           'is-acitve': layout === 'top'
         }
@@ -47,7 +47,7 @@ const layout = computed(() => appStore.getLayout)
     <div
       :class="[
         `${prefixCls}__cut-menu`,
-        'relative w-56px h-48px cursor-pointer bg-gray-300',
+        'relative w-[56px] h-[48px] cursor-pointer bg-gray-300',
         {
           'is-acitve': layout === 'cutMenu'
         }

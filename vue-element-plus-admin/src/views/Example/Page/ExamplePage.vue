@@ -131,7 +131,7 @@ const action = (row: TableData, type: string) => {
   <ContentWrap>
     <Search :schema="allSchemas.searchSchema" @search="setSearchParams" @reset="setSearchParams" />
 
-    <div class="mb-10px">
+    <div class="mb-[10px]">
       <ElButton type="primary" @click="AddAction">{{ t('exampleDemo.add') }}</ElButton>
       <ElButton :loading="delLoading" type="danger" @click="delData(null, true)">
         {{ t('exampleDemo.del') }}

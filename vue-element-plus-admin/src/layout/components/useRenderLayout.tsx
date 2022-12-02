@@ -168,7 +168,7 @@ export const useRenderLayout = () => {
       <>
         <div class="flex items-center justify-between bg-[var(--top-header-bg-color)] border-bottom-1 border-solid border-[var(--top-tool-border-color)] dark:border-[var(--el-border-color)]">
           {logo.value ? <Logo class="hover-trigger"></Logo> : undefined}
-          <Menu class="flex-1 px-10px h-[var(--top-tool-height)]"></Menu>
+          <Menu class="flex-1 px-[10px] h-[var(--top-tool-height)]"></Menu>
           <ToolHeader></ToolHeader>
         </div>
         <div class={[`${prefixCls}-content`, 'h-full w-full']}>

@@ -135,7 +135,7 @@ const loginRegister = async () => {
           {{ t('login.register') }}
         </ElButton>
       </div>
-      <div class="w-[100%] mt-15px">
+      <div class="w-[100%] mt-[15px]">
         <ElButton class="w-[100%]" @click="toLogin">
           {{ t('login.hasUser') }}
         </ElButton>

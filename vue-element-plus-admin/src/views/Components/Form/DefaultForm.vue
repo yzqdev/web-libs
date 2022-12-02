@@ -1042,8 +1042,8 @@ const schema = reactive<FormSchema[]>([
         <Icon icon="ep:calendar" class="el-input__icon" />
       </template>
 
-      <template #field5-prepend> Http:// </template>
-      <template #field5-append> .com </template>
+      <template #field5-prepend>Http://</template>
+      <template #field5-append>.com</template>
 
       <template #field9-default="{ item }">
         <div class="value">{{ item.value }}</div>
@@ -1080,7 +1080,7 @@ const schema = reactive<FormSchema[]>([
 
       <template #field25-default="{ node, data }">
         <span>{{ data.label }}</span>
-        <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
+        <span v-if="!node.isLeaf">({{ data.children.length }})</span>
       </template>
 
       <template #field36-default="{ option }">

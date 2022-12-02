@@ -261,7 +261,7 @@ watch(
   <div
     :id="prefixCls"
     :class="prefixCls"
-    class="flex w-full relative bg-[#fff] dark:bg-[var(--el-bg-color)]"
+    class="flex w-full relative bg-[#fff] dark:bg-[var(--el-bg-color)] border-b"
   >
     <span
       :class="`${prefixCls}__tool`"
@@ -351,7 +351,7 @@ watch(
               <router-link :ref="tagLinksRefs.set" :to="{ ...item }" custom v-slot="{ navigate }">
                 <div
                   @click="navigate"
-                  class="h-full flex justify-center items-center whitespace-nowrap pl-15px"
+                  class="h-full flex justify-center items-center whitespace-nowrap pl-[15px]"
                 >
                   <Icon
                     v-if="
@@ -362,7 +362,7 @@ watch(
                     "
                     :icon="item?.matched[1]?.meta?.icon"
                     :size="12"
-                    class="mr-5px"
+                    class="mr-[5px]"
                   />
                   {{ t(item?.meta?.title as string) }}
                   <Icon

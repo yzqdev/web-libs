@@ -29,18 +29,18 @@ onMounted(() => {
       <div
         :class="[
           `${prefixCls}-header`,
-          'flex border-bottom-1 h-50px items-center text-center bg-white pr-10px'
+          'flex border-bottom-1 h-[50px] items-center text-center bg-white pr-10px'
         ]"
       >
         <div :class="[`${prefixCls}-header__back`, 'flex pl-10px pr-10px ']">
           <el-button @click="emit('back')">
-            <Icon icon="ep:arrow-left" class="mr-5px" />
+            <Icon icon="ep:arrow-left" class="mr-[5px]" />
             {{ t('common.back') }}
           </el-button>
         </div>
         <div :class="[`${prefixCls}-header__title`, 'flex flex-1  justify-center']">
           <slot name="title">
-            <label class="text-16px font-700">{{ title }}</label>
+            <label class="text-[16px] font-[700]">{{ title }}</label>
           </slot>
         </div>
         <div :class="[`${prefixCls}-header__right`, 'flex  pl-10px pr-10px']">
@@ -49,7 +49,7 @@ onMounted(() => {
       </div>
     </Sticky>
     <div style="padding: var(--app-content-padding)">
-      <ElCard :class="[`${prefixCls}-body`, 'mb-20px']" shadow="never">
+      <ElCard :class="[`${prefixCls}-body`, 'mb-[20px]']" shadow="never">
         <div>
           <slot></slot>
         </div>

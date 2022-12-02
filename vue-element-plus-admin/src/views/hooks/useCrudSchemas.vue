@@ -196,7 +196,7 @@ const delData = async (row: TableData | null, multiple: boolean) => {
   <ContentWrap>
     <Search :schema="allSchemas.searchSchema" @search="setSearchParams" @reset="setSearchParams" />
 
-    <div class="mb-10px">
+    <div class="mb-[10px]">
       <ElButton :loading="delLoading" type="danger" @click="delData(null, true)">
         {{ t('exampleDemo.del') }}
       </ElButton>

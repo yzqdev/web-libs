@@ -33,19 +33,19 @@ const disabledClick = () => {
   <ContentWrap :title="t('qrcodeDemo.qrcode')" :message="t('qrcodeDemo.qrcodeDes')">
     <ElRow :gutter="20" justify="space-between">
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.basicUsage') }}</div>
           <Qrcode :text="title" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.imgTag') }}</div>
           <Qrcode :text="title" tag="img" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.style') }}</div>
           <Qrcode
             :text="title"
@@ -59,31 +59,31 @@ const disabledClick = () => {
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.click') }}</div>
           <Qrcode :text="title" @click="codeClick" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.asynchronousContent') }}</div>
           <Qrcode :text="asyncTitle" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.invalid') }}</div>
           <Qrcode :text="title" disabled @disabled-click="disabledClick" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.logoConfig') }}</div>
           <Qrcode :text="title" :logo="logoImg" />
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.logoStyle') }}</div>
           <Qrcode
             :text="title"
@@ -98,7 +98,7 @@ const disabledClick = () => {
         </ElCard>
       </ElCol>
       <ElCol :xl="6" :lg="6" :md="12" :sm="24" :xs="24">
-        <ElCard shadow="hover" class="mb-10px text-center">
+        <ElCard shadow="hover" class="mb-[10px] text-center">
           <div class="font-bold">{{ t('qrcodeDemo.size') }}</div>
           <Qrcode :text="title" :width="100" />
         </ElCard>

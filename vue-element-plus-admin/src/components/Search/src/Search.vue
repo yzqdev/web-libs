@@ -112,11 +112,11 @@ const setVisible = () => {
     <template #action>
       <div v-if="layout === 'inline'">
         <ElButton v-if="showSearch" type="primary" @click="search">
-          <Icon icon="ep:search" class="mr-5px" />
+          <Icon icon="ep:search" class="mr-[5px]" />
           {{ t('common.query') }}
         </ElButton>
         <ElButton v-if="showReset" @click="reset">
-          <Icon icon="ep:refresh-right" class="mr-5px" />
+          <Icon icon="ep:refresh-right" class="mr-[5px]" />
           {{ t('common.reset') }}
         </ElButton>
         <ElButton v-if="expand" text @click="setVisible">
@@ -130,11 +130,11 @@ const setVisible = () => {
   <template v-if="layout === 'bottom'">
     <div :style="bottonButtonStyle">
       <ElButton v-if="showSearch" type="primary" @click="search">
-        <Icon icon="ep:search" class="mr-5px" />
+        <Icon icon="ep:search" class="mr-[5px]" />
         {{ t('common.query') }}
       </ElButton>
       <ElButton v-if="showReset" @click="reset">
-        <Icon icon="ep:refresh-right" class="mr-5px" />
+        <Icon icon="ep:refresh-right" class="mr-[5px]" />
         {{ t('common.reset') }}
       </ElButton>
       <ElButton v-if="expand" text @click="setVisible">

@@ -170,7 +170,7 @@ const selectAllNone = () => {
       </template>
 
       <template #expand="data">
-        <div class="ml-30px">
+        <div class="ml-[30px]">
           <div>{{ t('tableDemo.title') }}：{{ data.row.title }}</div>
           <div>{{ t('tableDemo.author') }}：{{ data.row.author }}</div>
           <div>{{ t('tableDemo.displayTime') }}：{{ data.row.display_time }}</div>

@@ -120,44 +120,44 @@ const { t } = useI18n()
               <img
                 src="@/assets/imgs/avatar.jpg"
                 alt=""
-                class="w-70px h-70px rounded-[50%] mr-20px"
+                class="w-[70px] h-[70px] rounded-[50%] mr-[20px]"
               />
               <div>
-                <div class="text-20px text-700">
+                <div class="text-[20px] text-700">
                   {{ t('workplace.goodMorning') }}，Archer，{{ t('workplace.happyDay') }}
                 </div>
-                <div class="mt-10px text-14px text-gray-500">
+                <div class="mt-[10px] text-[14px] text-gray-500">
                   {{ t('workplace.toady') }}，20℃ - 32℃！
                 </div>
               </div>
             </div>
           </ElCol>
           <ElCol :xl="12" :lg="12" :md="12" :sm="24" :xs="24">
-            <div class="flex h-70px items-center justify-end <sm:mt-20px">
-              <div class="px-8px text-right">
-                <div class="text-14px text-gray-400 mb-20px">{{ t('workplace.project') }}</div>
+            <div class="flex h-[70px] items-center justify-end <sm:mt-[20px]">
+              <div class="px-[8px] text-right">
+                <div class="text-[14px] text-gray-400 mb-[20px]">{{ t('workplace.project') }}</div>
                 <CountTo
-                  class="text-20px"
+                  class="text-[20px]"
                   :start-val="0"
                   :end-val="totalSate.project"
                   :duration="2600"
                 />
               </div>
               <ElDivider direction="vertical" />
-              <div class="px-8px text-right">
-                <div class="text-14px text-gray-400 mb-20px">{{ t('workplace.toDo') }}</div>
+              <div class="px-[8px] text-right">
+                <div class="text-[14px] text-gray-400 mb-[20px]">{{ t('workplace.toDo') }}</div>
                 <CountTo
-                  class="text-20px"
+                  class="text-[20px]"
                   :start-val="0"
                   :end-val="totalSate.todo"
                   :duration="2600"
                 />
               </div>
               <ElDivider direction="vertical" border-style="dashed" />
-              <div class="px-8px text-right">
-                <div class="text-14px text-gray-400 mb-20px">{{ t('workplace.access') }}</div>
+              <div class="px-[8px] text-right">
+                <div class="text-[14px] text-gray-400 mb-[20px]">{{ t('workplace.access') }}</div>
                 <CountTo
-                  class="text-20px"
+                  class="text-[20px]"
                   :start-val="0"
                   :end-val="totalSate.access"
                   :duration="2600"
@@ -170,8 +170,8 @@ const { t } = useI18n()
     </ElCard>
   </div>
 
-  <ElRow class="mt-20px" :gutter="20" justify="space-between">
-    <ElCol :xl="16" :lg="16" :md="24" :sm="24" :xs="24" class="mb-20px">
+  <ElRow class="mt-[20px]" :gutter="20" justify="space-between">
+    <ElCol :xl="16" :lg="16" :md="24" :sm="24" :xs="24" class="mb-[20px]">
       <ElCard shadow="never">
         <template #header>
           <div class="flex justify-between">
@@ -192,11 +192,11 @@ const { t } = useI18n()
             >
               <ElCard shadow="hover">
                 <div class="flex items-center">
-                  <Icon :icon="item.icon" :size="25" class="mr-10px" />
-                  <span class="text-16px">{{ item.name }}</span>
+                  <Icon :icon="item.icon" :size="25" class="mr-[10px]" />
+                  <span class="text-[16px]">{{ item.name }}</span>
                 </div>
-                <div class="mt-15px text-14px text-gray-400">{{ t(item.message) }}</div>
-                <div class="mt-20px text-12px text-gray-400 flex justify-between">
+                <div class="mt-[15px] text-[14px] text-gray-400">{{ t(item.message) }}</div>
+                <div class="mt-[20px] text-12px text-gray-400 flex justify-between">
                   <span>{{ item.personal }}</span>
                   <span>{{ formatTime(item.time, 'yyyy-MM-dd') }}</span>
                 </div>
@@ -206,7 +206,7 @@ const { t } = useI18n()
         </ElSkeleton>
       </ElCard>
 
-      <ElCard shadow="never" class="mt-20px">
+      <ElCard shadow="never" class="mt-[20px]">
         <template #header>
           <div class="flex justify-between">
             <span>{{ t('workplace.dynamic') }}</span>
@@ -222,12 +222,12 @@ const { t } = useI18n()
                 class="w-35px h-35px rounded-[50%] mr-20px"
               />
               <div>
-                <div class="text-14px">
+                <div class="text-[14px]">
                   <Highlight :keys="item.keys.map((v) => t(v))">
                     {{ t('workplace.pushCode') }}
                   </Highlight>
                 </div>
-                <div class="mt-15px text-12px text-gray-400">
+                <div class="mt-[15px] text-12px text-gray-400">
                   {{ useTimeAgo(item.time) }}
                 </div>
               </div>
@@ -237,7 +237,7 @@ const { t } = useI18n()
         </ElSkeleton>
       </ElCard>
     </ElCol>
-    <ElCol :xl="8" :lg="8" :md="24" :sm="24" :xs="24" class="mb-20px">
+    <ElCol :xl="8" :lg="8" :md="24" :sm="24" :xs="24" class="mb-[20px]">
       <ElCard shadow="never">
         <template #header>
           <span>{{ t('workplace.shortcutOperation') }}</span>
@@ -251,7 +251,7 @@ const { t } = useI18n()
             :md="12"
             :sm="24"
             :xs="24"
-            class="mb-10px"
+            class="mb-[10px]"
           >
             <ElLink type="default" :underline="false">
               {{ t('workplace.operation') }}{{ item }}
@@ -260,7 +260,7 @@ const { t } = useI18n()
         </ElSkeleton>
       </ElCard>
 
-      <ElCard shadow="never" class="mt-20px">
+      <ElCard shadow="never" class="mt-[20px]">
         <template #header>
           <span>xx{{ t('workplace.index') }}</span>
         </template>
@@ -269,15 +269,15 @@ const { t } = useI18n()
         </ElSkeleton>
       </ElCard>
 
-      <ElCard shadow="never" class="mt-20px">
+      <ElCard shadow="never" class="mt-[20px]">
         <template #header>
           <span>{{ t('workplace.team') }}</span>
         </template>
         <ElSkeleton :loading="loading" animated>
           <ElRow>
-            <ElCol v-for="item in team" :key="`team-${item.name}`" :span="12" class="mb-20px">
+            <ElCol v-for="item in team" :key="`team-${item.name}`" :span="12" class="mb-[20px]">
               <div class="flex items-center">
-                <Icon :icon="item.icon" class="mr-10px" />
+                <Icon :icon="item.icon" class="mr-[10px]" />
                 <ElLink type="default" :underline="false">
                   {{ item.name }}
                 </ElLink>

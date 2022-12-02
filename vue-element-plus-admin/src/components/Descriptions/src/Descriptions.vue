@@ -68,22 +68,22 @@ const toggleClick = () => {
   <div
     :class="[
       prefixCls,
-      'bg-[var(--el-color-white)] dark:(bg-[var(--el-bg-color)] border-[var(--el-border-color)] border-1px)'
+      'bg-[var(--el-color-white)] dark:(bg-[var(--el-bg-color)] border-[var(--el-border-color)] border-[1px])'
     ]"
   >
     <div
       v-if="title"
       :class="[
         `${prefixCls}-header`,
-        'h-50px flex justify-between items-center mb-10px border-bottom-1 border-solid border-[var(--tags-view-border-color)] px-10px cursor-pointer dark:border-[var(--el-border-color)]'
+        'h-[50px] flex justify-between items-center mb-[10px] border-bottom-1 border-solid border-[var(--tags-view-border-color)] px-[10px] cursor-pointer dark:border-[var(--el-border-color)]'
       ]"
       @click="toggleClick"
     >
-      <div :class="[`${prefixCls}-header__title`, 'relative font-18px font-bold ml-10px']">
+      <div :class="[`${prefixCls}-header__title`, 'relative font-18px font-bold ml-[10px]']">
         <div class="flex items-center">
           {{ title }}
           <ElTooltip v-if="message" :content="message" placement="right">
-            <Icon icon="ep:warning" class="ml-5px" />
+            <Icon icon="ep:warning" class="ml-[5px]" />
           </ElTooltip>
         </div>
       </div>
@@ -91,7 +91,7 @@ const toggleClick = () => {
     </div>
 
     <ElCollapseTransition>
-      <div v-show="show" :class="[`${prefixCls}-content`, 'p-10px']">
+      <div v-show="show" :class="[`${prefixCls}-content`, 'p-[10px]']">
         <ElDescriptions
           :column="2"
           border

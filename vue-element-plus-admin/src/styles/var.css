@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+}
 :root {
   --dark-bg-color: #293146;
 

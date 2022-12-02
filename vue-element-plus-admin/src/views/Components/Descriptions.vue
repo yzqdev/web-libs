@@ -81,7 +81,12 @@ const formValidation = () => {
   />
 
   <Form is-custom :model="form" :rules="rules" @register="register">
-    <Descriptions :title="t('descriptionsDemo.form')" :data="data" :schema="schema" class="mt-20px">
+    <Descriptions
+      :title="t('descriptionsDemo.form')"
+      :data="data"
+      :schema="schema"
+      class="mt-[20px]"
+    >
       <template #username-label="scope">
         <span class="is-required--item">{{ scope.label }}</span>
       </template>
@@ -125,7 +130,7 @@ const formValidation = () => {
       </template>
     </Descriptions>
     <div class="text-center mt-10px">
-      <ElButton @click="formValidation"> {{ t('formDemo.formValidation') }} </ElButton>
+      <ElButton @click="formValidation">{{ t('formDemo.formValidation') }}</ElButton>
     </div>
   </Form>
 </template>

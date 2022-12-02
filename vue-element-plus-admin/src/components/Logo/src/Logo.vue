@@ -59,7 +59,7 @@ watch(
     :class="[
       prefixCls,
       layout !== 'classic' ? `${prefixCls}__Top` : '',
-      'flex !h-[var(--logo-height)] items-center cursor-pointer pl-8px relative',
+      'flex !h-[var(--logo-height)] items-center cursor-pointer pl-[8px] relative',
       'dark:bg-[var(--el-bg-color)]'
     ]"
     to="/"
@@ -71,7 +71,7 @@ watch(
     <div
       v-if="show"
       :class="[
-        'ml-10px text-16px font-700',
+        'ml-[10px] text-[16px] font-[700]',
         {
           'text-[var(--logo-title-text-color)]': layout === 'classic',
           'text-[var(--top-header-text-color)]':

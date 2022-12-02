@@ -261,14 +261,12 @@ const getDictOne = async () => {
     <ElButton @click="setValue(false)">{{ t('formDemo.setValue') }}</ElButton>
     <ElButton @click="setValue(true)">{{ t('formDemo.resetValue') }}</ElButton>
 
-    <ElButton @click="setLabel">
-      {{ t('formDemo.set') }} {{ t('formDemo.select') }} label
-    </ElButton>
+    <ElButton @click="setLabel">{{ t('formDemo.set') }} {{ t('formDemo.select') }} label</ElButton>
 
-    <ElButton @click="addItem"> {{ t('formDemo.add') }} {{ t('formDemo.subitem') }} </ElButton>
+    <ElButton @click="addItem">{{ t('formDemo.add') }} {{ t('formDemo.subitem') }}</ElButton>
 
-    <ElButton @click="formValidation"> {{ t('formDemo.formValidation') }} </ElButton>
-    <ElButton @click="verifyReset"> {{ t('formDemo.verifyReset') }} </ElButton>
+    <ElButton @click="formValidation">{{ t('formDemo.formValidation') }}</ElButton>
+    <ElButton @click="verifyReset">{{ t('formDemo.verifyReset') }}</ElButton>
 
     <ElButton @click="getDictOne">
       {{ t('searchDemo.dynamicOptions') }}

@@ -52,37 +52,37 @@ const pauseResume = () => {
     </div>
     <ElRow :gutter="20" justify="space-between">
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.startVal') }}：</span>
           <ElInputNumber v-model="startVal" :min="0" />
         </div>
       </ElCol>
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.endVal') }}：</span>
           <ElInputNumber v-model="endVal" :min="1" />
         </div>
       </ElCol>
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.duration') }}：</span>
           <ElInputNumber v-model="duration" :min="1000" />
         </div>
       </ElCol>
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.separator') }}：</span>
           <ElInput v-model="separator" />
         </div>
       </ElCol>
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.prefix') }}：</span>
           <ElInput v-model="prefix" />
         </div>
       </ElCol>
       <ElCol :xl="8" :lg="8" :md="12" :sm="24" :xs="24">
-        <div class="flex mb-20px items-center">
+        <div class="flex mb-[20px] items-center">
           <span class="min-w-90px text-right">{{ t('countToDemo.suffix') }}：</span>
           <ElInput v-model="suffix" />
         </div>
