@@ -68,7 +68,7 @@ const toLogin = () => {
         </div>
         <Transition appear enter-active-class="animate__animated animate__bounceInRight">
           <div
-            class="h-full flex items-center m-auto w-[100%] @2xl:max-w-500px @xl:max-w-500px @md:max-w-500px @lg:max-w-500px"
+            class="h-full flex items-center m-auto w-[100%] 2xl:max-w-[500px] xl:max-w-[500px] md:max-w-[500px] @lg:max-w-[500px]"
           >
             <LoginForm
               v-if="isLogin"

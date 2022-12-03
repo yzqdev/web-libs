@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { loadEnv } from 'vite'
 import type { UserConfig, ConfigEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import WindiCSS from 'vite-plugin-windicss'
+
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import { createStyleImportPlugin, ElementPlusResolve } from 'vite-plugin-style-import'
@@ -30,9 +30,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   return {
     base: env.VITE_BASE_PATH,
     plugins: [
-      Vue(),
+      Vue({reactivityTransform:true}),
       VueJsx(),
-      WindiCSS(),
+
       createStyleImportPlugin({
         resolves: [ElementPlusResolve()],
         libs: [{

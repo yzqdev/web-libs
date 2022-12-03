@@ -5,7 +5,7 @@ function range(size, startAt = 1) {
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   corePlugins: {
-    preflight: false,
+    preflight: true,
   },
   darkMode: 'class',
   attributify: false,
@@ -30,12 +30,12 @@ module.exports = {
     // height: {
     //   ...range(50).map((i) => `h-${i}px`)
     // },
-    margin: {
-      ...range(50).map((i) => `mt-${i}px`),
-      ...range(50).map((i) => `mr-${i}px`),
-      ...range(50).map((i) => `mb-${i}px`),
-      ...range(50).map((i) => `ml-${i}px`)
-    }
+    // margin: {
+    //   ...range(50).map((i) => `mt-${i}px`),
+    //   ...range(50).map((i) => `mr-${i}px`),
+    //   ...range(50).map((i) => `mb-${i}px`),
+    //   ...range(50).map((i) => `ml-${i}px`)
+    // }
   },
   plugins: [
     function ({ addBase }) {
