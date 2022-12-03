@@ -1,0 +1,24 @@
+{
+  "name": "@vben/vbencomponents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@iconify/iconify": "^3.0.0",
+    "@vben/utils": "workspace:*",
+    "@vben/constants": "workspace:*",
+    "sass": "^1.55.0",
+    "vue": "^3.2.45",
+    "vxe-table": "^4.3.5",
+    "xe-utils": "^3.5.7"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.138",
+    "@purge-icons/generated": "^0.9.0"
+  }
+}

@@ -1,0 +1,19 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: npm install --force
+      - run: npm run lint
+      - run: npm run build
+        env:
+          NODE_ENV: production
+      # - if: github.ref == 'refs/heads/main'
+      #   run: npx gh-pages -d dist -u "GitHub Actions <bots@github.com>" -t
+      #     -r https://${{ github.token }}@github.com/${{ github.repository }}.git

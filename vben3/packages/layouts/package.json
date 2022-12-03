@@ -1,0 +1,23 @@
+{
+  "name": "@vben/layouts",
+  "version": "3.0.0-alpha.4",
+  "main": "index.ts",
+  "module": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules && pnpm rimraf dist && pnpm rimraf .turbo"
+  },
+  "dependencies": {
+    "@vben/constants": "workspace:*",
+    "@vben/directives": "workspace:*",
+    "@vben/hooks": "workspace:*",
+    "@vben/locale": "workspace:*",
+    "@vben/types": "workspace:*",
+    "@vben/use": "workspace:*",
+    "@vben/utils": "workspace:*",
+    "@vben/vbencomponents": "workspace:*",
+    "@vueuse/core": "^9.6.0",
+    "vue": "3.2.45",
+    "vue-router": "^4.1.6"
+  }
+}
