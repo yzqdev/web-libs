@@ -1,0 +1,11 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/webpack-cli.*
+<PROJECT_ROOT>/node_modules/resolve.*
+
+[include]
+lib/
+index.js
+
+[options]
+sharedmemory.heap_size=3221225472
+exact_by_default=true
