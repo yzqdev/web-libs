@@ -106,13 +106,10 @@ const data = reactive<Data>({
 const { formItem } = useFormItem()
 
 const minDisabled = computed(
-  () =>
-    isNumber(props.modelValue) &&
-    ensurePrecision(props.modelValue, -1)! < props.min
+  () => isNumber(props.modelValue) && props.modelValue <= props.min
 )
 const maxDisabled = computed(
-  () =>
-    isNumber(props.modelValue) && ensurePrecision(props.modelValue)! > props.max
+  () => isNumber(props.modelValue) && props.modelValue >= props.max
 )
 
 const numPrecision = computed(() => {
@@ -278,7 +275,7 @@ watch(
   (value) => {
     const userInput = verifyValue(data.userInput)
     const newValue = verifyValue(value, true)
-    if (!userInput || userInput !== newValue) {
+    if (!isNumber(userInput) && (!userInput || userInput !== newValue)) {
       data.currentValue = newValue
       data.userInput = null
     }
