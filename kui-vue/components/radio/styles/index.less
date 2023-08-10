@@ -1,0 +1,196 @@
+@import '../../styles/var.less';
+.k-radio-group {
+  // display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  // font-size: 0;
+  // vertical-align: middle;
+  white-space: nowrap;
+  .k-btn {
+    position: relative;
+    margin-left: -1px;
+    z-index: 0;
+    border-radius: 0;
+    &:focus, &:hover {
+      z-index: 2;
+    }
+    &:first-child {
+      border-top-left-radius: var(--kui-border-radius);
+      border-bottom-left-radius: var(--kui-border-radius);
+    }
+    &:last-child {
+      border-top-right-radius: var(--kui-border-radius);
+      border-bottom-right-radius: var(--kui-border-radius);
+    }
+  }
+  .k-btn-hollow {
+    color: var(--kui-color-font);
+    border-color: var(--kui-color-border);
+  }
+  .k-btn-primary {
+    z-index: 1;
+  }
+  .k-btn-primary.k-btn-hollow {
+    z-index: 2;
+    color: var(--kui-color-main);
+    border-color: var(--kui-color-main);
+  }
+  .k-radio {
+    margin-right: 16px;
+  }
+  .k-radio-label {
+    font-size: 14px;
+  }
+  // .k-btn-solid {
+  //   margin-left: -1px;
+  // }
+}
+
+.k-radio-cirle {
+  .k-btn:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .k-btn:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
+.k-radio {
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  color: var(--kui-color-font);
+  .k-radio-symbol {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    outline: 0;
+    line-height: 1;
+    position: relative;
+    margin: 0;
+    font-size: 0;
+  }
+  .k-radio-inner {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--kui-color-border);
+    border-radius: 2px;
+    background-color: var(--kui-color-back);
+    transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+    border-radius: 50%;
+    &:after {
+      box-sizing: content-box;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      content: "";
+      background-color: var(--kui-color-main);
+      transition: all .2s ease-in-out;
+    }
+  }
+  .k-radio-input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: inherit;
+    &:focus ,&:hover{
+      +.k-radio-inner {
+        border: 1px solid var(--kui-color-main);
+        box-shadow: 0 0 5px var(--kui-color-main-30);
+      }
+    }
+  }
+  .k-radio-label {
+    padding-left: 8px;
+    vertical-align: middle;
+  }
+}
+
+.k-radio-checked {
+  .k-radio-inner {
+    background: var(--kui-color-main);
+    border-color: var(--kui-color-main);
+    &:after {
+      opacity: 1;
+      width: 6px;
+      height: 6px;
+      background-color: #fff; //var(--kui-color-back);
+    }
+  }
+}
+
+.k-radio-disabled {
+  cursor: not-allowed;
+  // opacity: .5;
+  color: var(--kui-color-disable-color);
+  &.k-radio {
+    .k-radio-input {
+      cursor: not-allowed;
+    }
+    .k-radio-inner {
+      background: var(--kui-color-disable-back);
+      border-color: var(--kui-color-disable-border);
+      &:after {
+        background-color: var(--kui-color-disable-border);
+      }
+    }
+  }
+}
+
+.k-radio-group-vertical {
+  display: block;
+  .k-radio {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.k-radio-group-light {
+  .k-btn {
+    margin-left: 0;
+    &:nth-child(n+2) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        left: -1px;
+        border-left: 1px solid var(--kui-color-border);
+        height: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.k-radio-group-card {
+  padding: 4px;
+  background-color: var(--kui-color-gray-80);
+  border-radius: var(--kui-border-radius);
+  .k-btn {
+    border: none;
+    border-radius: var(--kui-border-radius);
+    &:disabled {
+      background: 0 0;
+    }
+  }
+}

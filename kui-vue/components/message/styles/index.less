@@ -1,0 +1,97 @@
+@import '../../styles/var.less';
+.k-message {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--kui-color-font);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 1010;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  pointer-events: none;
+  .k-message-box {
+    box-sizing: content-box;
+    padding: 0 12px 14px 12px;
+    text-align: center;
+    transition: all .3s;
+    // margin-top: -8px;
+  }
+  .k-message-content {
+    box-sizing: content-box;
+    line-height: 1;
+    padding: 10px 16px;
+    border-radius: var(--kui-border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--kui-color-control-10);
+    display: inline-flex;
+    align-items: center;
+    pointer-events: all;
+    align-items: center;
+    .k-message-icon {
+      margin-right: 8px;
+      font-size: 22px;
+      vertical-align: sub;
+    }
+  }
+  .k-message-close {
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 18px;
+    vertical-align: sub;
+    border-radius: var(--kui-border-radius);
+    padding: 2px;
+    &:hover{
+      background-color: var(--kui-color-gray-80);
+    }
+  }
+}
+
+.k-message-success .k-message-icon {
+  color: var(--kui-color-success);
+}
+
+.k-message-error .k-message-icon {
+  color: var(--kui-color-danger);
+}
+
+.k-message-info .k-message-icon {
+  color: var(--kui-color-main);
+}
+
+.k-message-warning .k-message-icon {
+  color: var(--kui-color-warning);
+}
+
+@keyframes msgIn {
+  from {
+    opacity: 0;
+    margin-top: -55px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes msgOut {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+  to {
+    opacity: -55px;
+    margin-top: 0;
+  }
+}
+
+.k-message-slide-enter-active {
+  animation: msgIn .3s ease;
+}
+
+.k-message-slide-leave-active {
+  animation: msgOut .3s ease;
+}

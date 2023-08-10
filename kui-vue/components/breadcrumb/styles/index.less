@@ -1,0 +1,46 @@
+@import '../../styles/var.less';
+
+.k-breadcrumb {
+  line-height: 1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--kui-color-disable-color);
+  font-size: 14px;
+
+  &-item {
+    display: inline-flex;
+    align-items: center;
+
+    .k-icon {
+      margin-right: 4px;
+    }
+
+    &:hover {
+      color: var(--kui-color-main);
+    }
+
+    &:active {
+      color: var(--kui-color-main-actived);
+    }
+  }
+
+  &-link {
+    cursor: pointer;
+  }
+
+  >span {
+    &:last-child {
+      color: var(--kui-color-title);
+
+      .k-breadcrumb-separator {
+        display: none;
+      }
+    }
+  }
+
+  &-separator {
+    margin: 0 5px;
+  }
+}
