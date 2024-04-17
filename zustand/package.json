@@ -1,0 +1,6 @@
+{
+  "name": "@me/zustand",
+  "workspaces": [
+    "packages/*"
+  ],"scripts": {"dev":"bun --cwd packages/sample dev"}
+}
